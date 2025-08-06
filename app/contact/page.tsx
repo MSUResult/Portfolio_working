@@ -93,7 +93,7 @@ export default function Contact() {
                   href="mailto:your.email@example.com"
                   className="text-secondary hover:text-primary"
                 >
-                  your.email@example.com
+                  shivanshsingh4539@gmail.com
                 </a>
               </div>
             </motion.div>
@@ -111,7 +111,7 @@ export default function Contact() {
                   href="tel:+1234567890"
                   className="text-secondary hover:text-primary"
                 >
-                  +1 (234) 567-890
+                  +91 7618550475
                 </a>
               </div>
             </motion.div>
