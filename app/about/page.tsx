@@ -106,18 +106,22 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">
-              Senior Full Stack Developer
+              Freelance Full Stack Developer
             </h3>
-            <p className="text-primary mb-2">Company Name • 2020 - Present</p>
+            <p className="text-primary mb-2">Self-Employed • 2020 - Present</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>
-                Led development of multiple web applications using React and
-                Node.js
+                Collaborated with 15+ clients to deliver custom web apps using
+                React, Next.js, and Node.js
               </li>
               <li>
-                Implemented CI/CD pipelines reducing deployment time by 50%
+                Built scalable dashboards, CRMs, and landing pages for startups
+                and local businesses
               </li>
-              <li>Mentored junior developers and conducted code reviews</li>
+              <li>
+                Handled full-cycle development: UI/UX, backend APIs, deployment,
+                and SEO
+              </li>
             </ul>
           </motion.div>
 
@@ -126,15 +130,23 @@ export default function About() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">Full Stack Developer</h3>
-            <p className="text-primary mb-2">Previous Company • 2018 - 2020</p>
+            <h3 className="text-xl font-semibold mb-2">
+              Freelance Frontend Developer
+            </h3>
+            <p className="text-primary mb-2">Contract Projects • 2018 - 2020</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
-              <li>Developed and maintained RESTful APIs</li>
               <li>
-                Built responsive user interfaces with modern JavaScript
-                frameworks
+                Developed responsive UI components using React, Tailwind CSS,
+                and Framer Motion
               </li>
-              <li>Optimized database queries improving performance by 40%</li>
+              <li>
+                Improved performance and UX for several client websites and
+                e-commerce platforms
+              </li>
+              <li>
+                Integrated third-party APIs (Google Maps, payment gateways, CMS)
+                into custom builds
+              </li>
             </ul>
           </motion.div>
         </motion.div>
@@ -157,9 +169,11 @@ export default function About() {
             {...cardHoverSmall}
           >
             <h3 className="text-xl font-semibold mb-2">
-              Bachelor of Science in Computer Science
+              Bachelor of Computer Applications
             </h3>
-            <p className="text-primary mb-2">University Name • 2014 - 2018</p>
+            <p className="text-primary mb-2">
+              University Name • 2022 - ongoing
+            </p>
             <p className="text-secondary">
               Graduated with honors. Focused on software engineering and web
               development.
