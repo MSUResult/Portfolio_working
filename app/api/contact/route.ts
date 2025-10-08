@@ -1,35 +1,3 @@
-// import { NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
-
-// interface ContactRequestBody {
-//   name: string;
-//   email: string;
-//   message: string;
-// }
-
-// export async function POST(request: Request) {
-//   try {
-//     (await request.json()) as ContactRequestBody;
-
-//     // Here you would typically:
-//     // 1. Validate the input
-//     // 2. Send an email using a service like SendGrid, AWS SES, etc.
-//     // 3. Store the message in a database if needed
-
-//     // For now, we'll just simulate a successful response
-
-//     return NextResponse.json(
-//       { message: "Message sent successfully" },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     const errorMessage =
-//       error instanceof Error ? error.message : "Failed to send message";
-//     return NextResponse.json({ message: errorMessage }, { status: 500 });
-//   }
-// }
-// app/api/contact/route.ts
-
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
@@ -56,16 +24,53 @@ export async function POST(request: Request) {
 
   try {
     // Send the email
-    await transporter.sendMail({
-      from: process.env.GMAIL_USER, // Sender address
-      to: process.env.GMAIL_USER, // The email you want to receive messages at
-      subject: `New Contact Form Message from ${name}`,
-      html: `
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong> ${message}</p>
-      `,
-    });
+   await transporter.sendMail({
+  from: `"${name}" <${email}>`,
+  to: process.env.GMAIL_USER,
+  subject: `📩 New Message from ${name} — Portfolio Contact`,
+  html: `
+  <div style="
+    background-color:#f4f6f8;
+    padding:40px 20px;
+    font-family: 'Inter', Arial, sans-serif;
+    color:#222;
+  ">
+    <div style="
+      max-width:600px;
+      background-color:#ffffff;
+      margin:0 auto;
+      border-radius:12px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      overflow:hidden;
+      border-top:6px solid #6366f1;
+    ">
+      <div style="padding:30px 30px 10px;">
+        <h2 style="color:#111827; margin-bottom:8px;">📬 New Portfolio Message</h2>
+        <p style="font-size:14px; color:#6b7280; margin:0;">
+          You just received a new contact form submission from your portfolio site.
+        </p>
+      </div>
+
+      <hr style="border:none; border-top:1px solid #e5e7eb; margin:15px 0;" />
+
+      <div style="padding:0 30px 25px;">
+        <p style="margin-bottom:10px;"><strong style="color:#111827;">👤 Name:</strong> ${name}</p>
+        <p style="margin-bottom:10px;"><strong style="color:#111827;">📧 Email:</strong> ${email}</p>
+        <div style="margin-top:20px; padding:18px; background:#f9fafb; border-radius:8px;">
+          <p style="margin:0; white-space:pre-wrap; line-height:1.6; color:#374151;">
+            ${message.replace(/\n/g, "<br/>")}
+          </p>
+        </div>
+      </div>
+
+      <div style="background:#f9fafb; padding:20px 30px; text-align:center; font-size:12px; color:#9ca3af;">
+        <p style="margin:0;">🌐 This message was sent from your <strong>Portfolio Contact Form</strong>.</p>
+      </div>
+    </div>
+  </div>
+  `,
+});
+
 
     // Return a success response
     return NextResponse.json(

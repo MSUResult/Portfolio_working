@@ -35,7 +35,7 @@ export default function Hero() {
               {...fadeIn}
               transition={{ delay: 0.8 }}
             >
-              Shivansh Singh
+              anshul kumar
             </motion.span>
           </motion.h1>
           <motion.p
@@ -61,7 +61,7 @@ export default function Hero() {
               <FaGithub />
             </motion.a>
             <motion.a
-              href="https://www.linkedin.com/in/shivansh-singh-bb1b0b328/"
+              href="https://www.linkedin.com/in/anshul-singh-bb1b0b328/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"

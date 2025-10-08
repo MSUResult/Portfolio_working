@@ -33,7 +33,7 @@ export default function Footer() {
               <FaTwitter className="h-6 w-6" />
             </a>
             <a
-              href="https://www.linkedin.com/in/shivansh-singh-bb1b0b328/"
+              href="https://www.linkedin.com/in/anshul-singh-bb1b0b328/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-secondary hover:text-primary transition-colors"

@@ -93,7 +93,7 @@ export default function Contact() {
                   href="mailto:your.email@example.com"
                   className="text-secondary hover:text-primary"
                 >
-                  shivanshsingh4539@gmail.com
+                  anshulsingh4539@gmail.com
                 </a>
               </div>
             </motion.div>
