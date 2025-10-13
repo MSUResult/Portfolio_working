@@ -8,7 +8,7 @@ const testimonials = [
     name: "Rahul Verma",
     role: "Startup Founder",
     feedback:
-      "anshul delivered a blazing fast landing page for our startup, complete with animations and mobile responsiveness. Highly recommended!",
+      "shivansh delivered a blazing fast landing page for our startup, complete with animations and mobile responsiveness. Highly recommended!",
     initials: "RV",
   },
   {
@@ -22,7 +22,7 @@ const testimonials = [
     name: "Ahmed Khan",
     role: "Local Business Owner",
     feedback:
-      "I needed a simple site for my tuition center and anshul handled everything – SEO, design, and Google ranking setup!",
+      "I needed a simple site for my tuition center and shivansh handled everything – SEO, design, and Google ranking setup!",
     initials: "AK",
   },
 ];

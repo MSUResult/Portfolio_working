@@ -67,7 +67,7 @@ export default function About() {
             <ul className="text-secondary space-y-2">
               <li>Node.js</li>
               <li>Express</li>
-              <li>PostgreSQL</li>
+              <li>Postman/Thunder Client</li>
               <li>MongoDB</li>
             </ul>
           </motion.div>
@@ -108,7 +108,7 @@ export default function About() {
             <h3 className="text-xl font-semibold mb-2">
               Freelance Full Stack Developer
             </h3>
-            <p className="text-primary mb-2">Self-Employed • 2020 - Present</p>
+            <p className="text-primary mb-2">Self-Employed • 2024 - Present</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>
                 Collaborated with 15+ clients to deliver custom web apps using
@@ -133,7 +133,7 @@ export default function About() {
             <h3 className="text-xl font-semibold mb-2">
               Freelance Frontend Developer
             </h3>
-            <p className="text-primary mb-2">Contract Projects • 2018 - 2020</p>
+            <p className="text-primary mb-2">Contract Projects • 2020 - 2021</p>
             <ul className="text-secondary list-disc list-inside space-y-2">
               <li>
                 Developed responsive UI components using React, Tailwind CSS,
