@@ -26,7 +26,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-6xl font-extrabold leading-tight mb-4"
+            className="text-4xl md:text-6xl font-extrabold leading-tight mb-5"
             {...fadeInUp}
             transition={{ delay: 0.3 }}
           >
@@ -34,16 +34,26 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
+            // Retained the excellent responsive text size and dark mode support
+            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto"
+            // Increased the max width slightly for better flow on large screens (2xl -> 3xl)
+            // Increased bottom margin slightly for more breathing room (mb-8 -> mb-10)
+
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            A <strong>Next.js & MERN Stack Developer</strong> from
-            <strong>Saharanpur, India</strong>
+            {/* Added a subtle span to the main title to enhance hierarchy and allow easier color targeting */}
+            <span className="font-semibold text-gray-900 dark:text-white">
+              Full Stack Developer | UI/UX Enthusiast | Open Source Contributor
+            </span>
+            <br />{" "}
+            {/* Added a line break for better visual separation on a single line */}
+            <span className="text-gray-500 dark:text-gray-400">
+              Based in <strong>Saharanpur, India</strong>
+            </span>
           </motion.p>
-
           <motion.div
-            className="flex justify-center space-x-5 mb-8"
+            className="flex justify-center space-x-5 mb-9"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
           >
