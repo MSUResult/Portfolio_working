@@ -8,45 +8,42 @@ import { fadeInUp, fadeIn, scaleIn } from "@/utils/animations";
 
 export default function Hero() {
   return (
-    <section className="py-28">
+    <section className="py-28 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            className="flex justify-center items-center mb-4"
+            className="flex justify-center items-center mb-6"
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
             <Image
               src="/profil.avif"
-              alt="Profile"
-              width={100}
-              height={100}
-              className="rounded-full w-32 h-32 object-cover ring-2 ring-primary hover:scale-105 transition-transform duration-300"
+              alt="Shivansh Singh - Saharanpur Web Developer"
+              width={120}
+              height={120}
+              className="rounded-full w-32 h-32 object-cover ring-4 ring-primary/70 shadow-lg hover:scale-105 transition-transform duration-300"
             />
           </motion.div>
+
           <motion.h1
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-4xl md:text-6xl font-extrabold leading-tight mb-4"
             {...fadeInUp}
             transition={{ delay: 0.3 }}
           >
-            Hi, I&apos;m{" "}
-            <motion.span
-              className="text-primary"
-              {...fadeIn}
-              transition={{ delay: 0.8 }}
-            >
-              Shivansh Singh
-            </motion.span>
+            <span className="text-primary">Hi, I’m Shivansh Singh</span>
           </motion.h1>
+
           <motion.p
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            Full Stack Developer | UI/UX Enthusiast | Open Source Contributor
+            A <strong>Next.js & MERN Stack Developer</strong> from
+            <strong>Saharanpur, India</strong>
           </motion.p>
+
           <motion.div
-            className="flex justify-center space-x-4 mb-8"
+            className="flex justify-center space-x-5 mb-8"
             {...fadeInUp}
             transition={{ delay: 0.5 }}
           >
@@ -56,7 +53,6 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaGithub />
             </motion.a>
@@ -66,7 +62,6 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaLinkedin />
             </motion.a>
@@ -76,30 +71,35 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
               whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
             >
               <FaTwitter />
             </motion.a>
           </motion.div>
+
           <motion.div
-            className="flex flex-col md:flex-row justify-center gap-4"
+            className="flex flex-col md:flex-row justify-center items-center gap-4"
             {...fadeInUp}
             transition={{ delay: 0.6 }}
           >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            {/* Blue Button */}
+            <motion.div whileHover={{ scale: 1.05 }}>
               <Link
                 href="/projects"
-                className="bg-primary inline-block w-full md:w-auto text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center justify-center bg-primary text-white px-8 py-3 
+                 rounded-lg font-semibold hover:bg-primary/90 transition-all shadow-md"
               >
-                View Projects
+                View My Projects
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+            {/* Outline Button */}
+            <motion.div whileHover={{ scale: 1.05 }}>
               <Link
                 href="/contact"
-                className=" inline-block w-full bg-gray-500  md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                className="inline-flex items-center justify-center border border-primary text-primary px-8 py-3 
+                 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all shadow-md"
               >
-                Contact Me
+                Let’s Work Together
               </Link>
             </motion.div>
           </motion.div>
