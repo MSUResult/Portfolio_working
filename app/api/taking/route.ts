@@ -11,7 +11,7 @@ export async function GET() {
 
     return NextResponse.json({
       success: true,
-      count: blogs.length,
+      count: blogs.length,         
       blogs,
     });
   } catch (error) {
