@@ -7,7 +7,7 @@ export const projects: Project[] = [
       "A full-stack platform that helps users easily find accurate government-approved property rates for their region. I built this project after noticing that most people don’t know the official land and property prices in their area, which often leads to confusion or misguidance. This website solves that by providing clear, reliable rate information with a smooth UI and fast performance",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
     githubLink: "https://github.com/MSUResult/SaharanpurPropertyPrice",
-    demoLink: "https://propertywala.com/",
+    demoLink: "https://saharanpurprice.in",
     image: "/projects/real.png",
   },
   {
