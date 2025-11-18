@@ -18,7 +18,7 @@ export const projects: Project[] = [
     githubLink: "https://github.com/MSUResult/Quiz_Expert",
     demoLink:
       "https://www.ksat.com/weather/2025/08/05/hot-quiet-this-week-so-when-is-our-average-first-front/",
-    image: "/projects/weather-app.png",
+    image: "/quiz.png",
   },
   {
     title: "Agency Website",
