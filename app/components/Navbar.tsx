@@ -18,18 +18,18 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  // REMOVED "Blogs" from here to clean up the UI
   const menuItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
+    { href: "/service", label: "Services" },
     { href: "/projects", label: "Projects" },
-    { href: "/blogs", label: "Blogs" },
     { href: "/contact", label: "Contact" },
     { href: "/download", label: "Resume" },
-    { href: "/startup", label: "Startup" },
   ];
 
   return (
-    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50">
+    <nav className="fixed w-full bg-white/80 dark:bg-dark/80 backdrop-blur-sm z-50 border-b border-gray-100 dark:border-gray-800">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-xl font-bold text-primary">
@@ -42,7 +42,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="hover:text-primary transition-colors"
+                className="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
               >
                 {item.label}
               </Link>
@@ -54,9 +54,9 @@ export default function Navbar() {
               whileTap={{ scale: 0.9 }}
             >
               {theme === "dark" ? (
-                <SunIcon className="h-5 w-5" />
+                <SunIcon className="h-5 w-5 text-yellow-500" />
               ) : (
-                <MoonIcon className="h-5 w-5" />
+                <MoonIcon className="h-5 w-5 text-gray-600" />
               )}
             </motion.button>
           </div>
@@ -84,9 +84,9 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden"
+              className="md:hidden overflow-hidden bg-white dark:bg-dark border-t dark:border-gray-800"
             >
-              <div className="py-4 space-y-4">
+              <div className="py-4 space-y-4 px-2">
                 {menuItems.map((item, index) => (
                   <motion.div
                     key={item.href}
@@ -96,13 +96,15 @@ export default function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className="block py-2 hover:text-primary transition-colors"
+                      className="block py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
                     </Link>
                   </motion.div>
                 ))}
+
+                {/* Theme Toggle Mobile */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -113,17 +115,17 @@ export default function Navbar() {
                       toggleTheme();
                       setIsMobileMenuOpen(false);
                     }}
-                    className="flex items-center py-2 hover:text-primary transition-colors"
+                    className="flex w-full items-center py-2 px-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-primary transition-colors"
                   >
                     {theme === "dark" ? (
                       <>
-                        <SunIcon className="h-5 w-5 mr-2" />
-                        Light Mode
+                        <SunIcon className="h-5 w-5 mr-3 text-yellow-500" />
+                        Switch to Light Mode
                       </>
                     ) : (
                       <>
-                        <MoonIcon className="h-5 w-5 mr-2" />
-                        Dark Mode
+                        <MoonIcon className="h-5 w-5 mr-3 text-gray-600" />
+                        Switch to Dark Mode
                       </>
                     )}
                   </button>

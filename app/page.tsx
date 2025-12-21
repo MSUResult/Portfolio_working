@@ -1,5 +1,5 @@
 import dbConnect from "@/lib/db";
-import Blogs from "./components/Blogs";
+import Blogs from "./components//Blogs";
 import Hero from "./components/Hero";
 import Newsletter from "./components/Newsletter";
 import Projects from "./components/Projects";

@@ -1,26 +1,39 @@
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedin, FaArrowRight } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-800">
       <div className="container max-w-7xl mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Left: Brand & Copyright */}
+          <div className="text-center md:text-left">
             <Link href="/" className="text-xl font-bold text-primary">
               Shivansh&trade;
             </Link>
             <p className="text-sm text-secondary mt-2">
-              © {new Date().getFullYear()} Devfolio. All rights reserved.
+              © {new Date().getFullYear()} Shivansh Portfolio.
             </p>
           </div>
 
+          {/* Center: Extra Links (Moved Blogs Here) */}
+          <div className="flex items-center gap-6">
+            <Link
+              href="/blogs"
+              className="group flex items-center gap-2 text-sm font-medium text-secondary hover:text-primary transition-colors"
+            >
+              Read my Blogs
+              <FaArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          {/* Right: Social Icons */}
           <div className="flex space-x-6">
             <a
               href="https://github.com/MSUResult"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="text-secondary hover:text-primary transition-colors transform hover:scale-110"
             >
               <FaGithub className="h-6 w-6" />
             </a>
@@ -28,7 +41,7 @@ export default function Footer() {
               href="https://x.com/Adarshs97102593"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="text-secondary hover:text-primary transition-colors transform hover:scale-110"
             >
               <FaTwitter className="h-6 w-6" />
             </a>
@@ -36,7 +49,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/shivansh-singh-bb1b0b328/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-secondary hover:text-primary transition-colors"
+              className="text-secondary hover:text-primary transition-colors transform hover:scale-110"
             >
               <FaLinkedin className="h-6 w-6" />
             </a>

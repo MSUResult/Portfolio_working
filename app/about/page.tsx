@@ -1,6 +1,14 @@
 "use client";
 
-import { FaCode, FaLaptopCode, FaGraduationCap } from "react-icons/fa";
+import {
+  FaCode,
+  FaLaptopCode,
+  FaRocket,
+  FaBriefcase,
+  FaProjectDiagram,
+  FaUserCheck,
+  FaGraduationCap,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import {
   fadeInUp,
@@ -13,173 +21,303 @@ import {
 
 export default function About() {
   return (
-    <div className="container max-w-7xl mx-auto py-12">
-      <motion.h1
-        className="text-4xl font-bold mb-8 text-center"
-        {...fadeInDown}
-      >
-        About Me
-      </motion.h1>
-
-      {/* Bio Section */}
-      <motion.section className="mb-16" {...fadeInUp}>
-        <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          I&apos;m a passionate Full Stack Developer with expertise in building
-          modern web applications. With a strong foundation in both frontend and
-          backend technologies, I create seamless user experiences and robust
-          server-side solutions.
+    <div className="container max-w-7xl mx-auto py-16 px-4 overflow-hidden">
+      {/* 1. HERO SECTION WITH GRADIENT */}
+      <motion.div className="text-center mb-16" {...fadeInDown}>
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          About Me
+        </h1>
+        <p className="text-xl text-gray-500 font-medium">
+          Transforming Ideas into Digital Reality in Saharanpur & Beyond.
         </p>
+      </motion.div>
+
+      {/* 2. STATS BAR (NEW! - Builds Instant Trust) */}
+      <motion.div
+        className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto mb-16"
+        variants={staggerContainer}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.div
+          variants={fadeInUp}
+          className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl text-center border border-blue-100 dark:border-blue-800"
+        >
+          <FaBriefcase className="text-3xl text-blue-600 mx-auto mb-2" />
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+            4+
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Years Experience
+          </p>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-2xl text-center border border-purple-100 dark:border-purple-800"
+        >
+          <FaProjectDiagram className="text-3xl text-purple-600 mx-auto mb-2" />
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+            200+
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Projects Delivered
+          </p>
+        </motion.div>
+        <motion.div
+          variants={fadeInUp}
+          className="hidden md:block bg-green-50 dark:bg-green-900/20 p-6 rounded-2xl text-center border border-green-100 dark:border-green-800"
+        >
+          <FaUserCheck className="text-3xl text-green-600 mx-auto mb-2" />
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+            100%
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Client Satisfaction
+          </p>
+        </motion.div>
+      </motion.div>
+
+      {/* 3. BIO SECTION - Clean & Professional */}
+      <motion.section className="mb-20" {...fadeInUp}>
+        <div className="bg-white dark:bg-gray-800/50 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 max-w-5xl mx-auto text-center relative overflow-hidden">
+          {/* Decorative blob */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+
+          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-200 leading-relaxed font-light">
+            I am a Full Stack Developer who bridges the gap between{" "}
+            <strong className="font-bold text-blue-600">complex code</strong>{" "}
+            and{" "}
+            <strong className="font-bold text-green-600">
+              real business growth
+            </strong>
+            .
+            <br />
+            <br />
+            From building the digital infrastructure for Saharanpur&apos;s
+            largest coaching institute,
+            <strong className="text-gray-900 dark:text-white font-bold bg-yellow-100 dark:bg-yellow-900/30 px-2 rounded-md mx-1">
+              Virat & Expert Academy
+            </strong>
+            , to helping local startups scale, I focus on delivering websites
+            that are fast, secure, and profitable.
+          </p>
+        </div>
       </motion.section>
 
-      {/* Skills Section */}
-      <motion.section className="mb-16" {...fadeIn} transition={{ delay: 0.2 }}>
-        <motion.h2 className="section-title" {...fadeInUp}>
-          Skills
+      {/* 4. EXPERTISE CARDS - With Better Styling */}
+      <motion.section className="mb-20" {...fadeIn} transition={{ delay: 0.2 }}>
+        <motion.h2
+          className="text-3xl font-bold text-center mb-10"
+          {...fadeInUp}
+        >
+          My Technical Expertise
         </motion.h2>
         <motion.div
-          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
+          {/* Card 1 */}
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-blue-500 hover:shadow-2xl transition-all duration-300"
             variants={fadeInUp}
             {...cardHover}
           >
-            <FaCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-            <ul className="text-secondary space-y-2">
-              <li>React / Next.js</li>
-              <li>TypeScript</li>
-              <li>Tailwind CSS</li>
-              <li>HTML5 / CSS3</li>
+            <div className="bg-blue-100 dark:bg-blue-900/30 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+              <FaCode className="h-7 w-7 text-blue-600" />
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Frontend & Design</h3>
+            <p className="text-gray-500 dark:text-gray-400 mb-4 text-sm">
+              I build mobile-first interfaces that keep users engaged and
+              convert visitors into buyers.
+            </p>
+            <ul className="text-gray-700 dark:text-gray-300 space-y-2 font-medium text-sm">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>{" "}
+                React.js / Next.js
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>{" "}
+                Tailwind CSS
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-500 rounded-full"></span>{" "}
+                Framer Motion
+              </li>
             </ul>
           </motion.div>
 
+          {/* Card 2 */}
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-green-500 hover:shadow-2xl transition-all duration-300"
             variants={fadeInUp}
             {...cardHover}
           >
-            <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
-            <ul className="text-secondary space-y-2">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>Postman/Thunder Client</li>
-              <li>MongoDB</li>
+            <div className="bg-green-100 dark:bg-green-900/30 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+              <FaLaptopCode className="h-7 w-7 text-green-600" />
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Backend & Security</h3>
+            <p className="text-gray-500 dark:text-gray-400 mb-4 text-sm">
+              Robust systems to handle student data, secure logins, and online
+              payments.
+            </p>
+            <ul className="text-gray-700 dark:text-gray-300 space-y-2 font-medium text-sm">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>{" "}
+                Node.js & Express
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>{" "}
+                MongoDB Database
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-500 rounded-full"></span>{" "}
+                Secure Auth
+              </li>
             </ul>
           </motion.div>
 
+          {/* Card 3 */}
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border-t-4 border-purple-500 hover:shadow-2xl transition-all duration-300"
             variants={fadeInUp}
             {...cardHover}
           >
-            <FaGraduationCap className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
-            <ul className="text-secondary space-y-2">
-              <li>Git / GitHub</li>
-              <li>Docker</li>
-              <li>AWS</li>
-              <li>CI/CD</li>
+            <div className="bg-purple-100 dark:bg-purple-900/30 w-14 h-14 rounded-full flex items-center justify-center mb-6">
+              <FaRocket className="h-7 w-7 text-purple-600" />
+            </div>
+            <h3 className="text-2xl font-bold mb-3">Growth Tools</h3>
+            <p className="text-gray-500 dark:text-gray-400 mb-4 text-sm">
+              Ensuring your website ranks high on Google and runs fast 24/7.
+            </p>
+            <ul className="text-gray-700 dark:text-gray-300 space-y-2 font-medium text-sm">
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span> SEO
+                Optimization
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>{" "}
+                Cloud Hosting (AWS)
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-500 rounded-full"></span>{" "}
+                Analytics
+              </li>
             </ul>
           </motion.div>
         </motion.div>
       </motion.section>
 
-      {/* Experience Section */}
-      <motion.section className="mb-16" {...fadeIn} transition={{ delay: 0.4 }}>
-        <motion.h2 className="section-title" {...fadeInUp}>
-          Experience
+      {/* 5. EXPERIENCE - Timeline Style */}
+      <motion.section className="mb-20" {...fadeIn} transition={{ delay: 0.4 }}>
+        <motion.h2
+          className="text-3xl font-bold text-center mb-10"
+          {...fadeInUp}
+        >
+          Professional Journey
         </motion.h2>
         <motion.div
-          className="max-w-3xl mx-auto space-y-8"
+          className="max-w-4xl mx-auto space-y-8"
           variants={staggerContainer}
           initial="initial"
           animate="animate"
         >
+          {/* Exp 1 */}
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg overflow-hidden group"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">
-              Freelance Full Stack Developer
-            </h3>
-            <p className="text-primary mb-2">Self-Employed • 2024 - Present</p>
-            <ul className="text-secondary list-disc list-inside space-y-2">
-              <li>
-                Collaborated with 15+ clients to deliver custom web apps using
-                React, Next.js, and Node.js
+            <div className="absolute left-0 top-0 h-full w-2 bg-blue-600 group-hover:w-3 transition-all"></div>
+            <div className="flex flex-col md:flex-row justify-between mb-4 items-start md:items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Lead Web Developer
+                </h3>
+                <p className="text-blue-600 font-bold text-lg">
+                  Virat & Expert Academy (Saharanpur)
+                </p>
+              </div>
+              <span className="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold mt-2 md:mt-0">
+                2024 - Present
+              </span>
+            </div>
+            <p className="text-gray-600 dark:text-gray-300 mb-4 italic">
+              "Managed the digital transformation for Saharanpur&apos;s largest
+              coaching institute."
+            </p>
+            <ul className="grid md:grid-cols-2 gap-3 text-sm text-gray-600 dark:text-gray-400">
+              <li className="flex items-start gap-2">
+                ✅ Handle 1000+ Student Inquiries
               </li>
-              <li>
-                Built scalable dashboards, CRMs, and landing pages for startups
-                and local businesses
+              <li className="flex items-start gap-2">
+                ✅ Secure Student Database
               </li>
-              <li>
-                Handled full-cycle development: UI/UX, backend APIs, deployment,
-                and SEO
-              </li>
+              <li className="flex items-start gap-2">✅ Mobile-First Design</li>
+              <li className="flex items-start gap-2">✅ Fast Page Loading</li>
             </ul>
           </motion.div>
 
+          {/* Exp 2 */}
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
+            className="relative bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg overflow-hidden group"
             variants={fadeInUp}
             {...cardHoverSmall}
           >
-            <h3 className="text-xl font-semibold mb-2">
-              Freelance Frontend Developer
-            </h3>
-            <p className="text-primary mb-2">Contract Projects • 2020 - 2021</p>
-            <ul className="text-secondary list-disc list-inside space-y-2">
+            <div className="absolute left-0 top-0 h-full w-2 bg-green-500 group-hover:w-3 transition-all"></div>
+            <div className="flex flex-col md:flex-row justify-between mb-4 items-start md:items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Freelance Developer
+                </h3>
+                <p className="text-green-600 font-bold text-lg">
+                  Self-Employed / Remote
+                </p>
+              </div>
+              <span className="bg-green-50 text-green-700 px-4 py-1 rounded-full text-sm font-semibold mt-2 md:mt-0">
+                2020 - 2023
+              </span>
+            </div>
+            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
               <li>
-                Developed responsive UI components using React, Tailwind CSS,
-                and Framer Motion
+                • Delivered{" "}
+                <strong className="text-gray-900 dark:text-white">
+                  15+ custom web projects
+                </strong>{" "}
+                for small businesses.
               </li>
               <li>
-                Improved performance and UX for several client websites and
-                e-commerce platforms
+                • Integrated secure payment gateways (Razorpay/Stripe) for
+                e-commerce clients.
               </li>
               <li>
-                Integrated third-party APIs (Google Maps, payment gateways, CMS)
-                into custom builds
+                • Helped local shops rank on Google Maps via SEO best practices.
               </li>
             </ul>
           </motion.div>
         </motion.div>
       </motion.section>
 
-      {/* Education Section */}
+      {/* 6. EDUCATION - Minimal & Clean */}
       <motion.section {...fadeIn} transition={{ delay: 0.6 }}>
-        <motion.h2 className="section-title" {...fadeInUp}>
-          Education
-        </motion.h2>
-        <motion.div
-          className="max-w-3xl mx-auto"
-          variants={staggerContainer}
-          initial="initial"
-          animate="animate"
-        >
+        <div className="max-w-2xl mx-auto text-center">
           <motion.div
-            className="bg-white dark:bg-dark/50 p-6 rounded-lg shadow-md"
-            variants={fadeInUp}
-            {...cardHoverSmall}
+            className="inline-block p-4 rounded-full bg-gray-100 dark:bg-gray-800 mb-4"
+            whileHover={{ rotate: 10 }}
           >
-            <h3 className="text-xl font-semibold mb-2">
-              Bachelor of Computer Applications
-            </h3>
-            <p className="text-primary mb-2">
-              University Name • 2022 - ongoing
-            </p>
-            <p className="text-secondary">
-              Graduated with honors. Focused on software engineering and web
-              development.
-            </p>
+            <FaGraduationCap className="text-4xl text-gray-700 dark:text-gray-300" />
           </motion.div>
-        </motion.div>
+          <h2 className="text-2xl font-bold mb-2">
+            Bachelor of Computer Applications
+          </h2>
+          <p className="text-primary font-medium text-lg">
+            J.V Jain College, Saharanpur • 2020
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Graduated with Honors • Web Tech Specialist
+          </p>
+        </div>
       </motion.section>
     </div>
   );
