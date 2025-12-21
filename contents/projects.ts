@@ -2,13 +2,13 @@ import { Project } from "../types";
 
 export const projects: Project[] = [
   {
-    title: "Property Government Rate Finding",
+    title: "Saharanpur Property Rate Analysis (Government & Market)",
     description:
-      "Find accurate, government-approved property rates instantly with a clean, fast UI.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
+      "This is my personal real estate project focused on Saharanpur. I built a hyperlocal website that analyzes and compares government circle rates with actual market property prices, helping users easily understand real property values in the area.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "MERN Stack"],
     githubLink: "https://github.com/MSUResult/SaharanpurPropertyPrice",
     demoLink: "https://saharanpurprice.in",
-    image: "/projects/real.png",
+    image: "/projects/main.png",
   },
   {
     title: "Quiz Website",
@@ -16,8 +16,7 @@ export const projects: Project[] = [
       "A fast, interactive quiz platform with dynamic questions and instant score tracking",
     technologies: ["React", "Nextjs", "Gemini API"],
     githubLink: "https://github.com/MSUResult/Quiz_Expert",
-    demoLink:
-      "https://www.ksat.com/weather/2025/08/05/hot-quiet-this-week-so-when-is-our-average-first-front/",
+    demoLink: "https://quiz-expert-mu.vercel.app/Signup",
     image: "/quiz.png",
   },
   {
@@ -45,7 +44,7 @@ export const projects: Project[] = [
       "A blogging platform with user authentication and markdown support.",
     technologies: ["Gatsby", "GraphQL", "Contentful"],
     githubLink: "https://github.com",
-    demoLink: "https://demo.com",
+    demoLink: "https://saharanpurprice.in/Blogs",
     image: "/projects/blog-website.jpeg",
   },
 

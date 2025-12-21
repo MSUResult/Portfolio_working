@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/Footer";
 import Script from "next/script"; // ✅ for Schema
+import WhatsAppButton from "./components/common/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,14 +24,24 @@ export const metadata: Metadata = {
     "I'm Shivansh Singh, a professional web developer from Saharanpur specializing in Next.js, React, Tailwind, SEO, and modern full-stack web development.",
   keywords: [
     "Saharanpur web developer",
-    "Saharanpur Website Maker",
+    "Saharanpur website maker",
     "web developer in Saharanpur",
+    "web developer",
+    "Noida web developer",
+    "website developer in Noida",
     "Next.js developer",
     "React developer",
     "freelance web designer Saharanpur",
-    "Website Creator in Saharanpur",
+    "website creator in Saharanpur",
     "MERN stack developer",
+    "website developer Saharanpur",
+    "best web developer in Saharanpur",
+    "Saharanpur website designer",
+    "Saharanpur portfolio website developer",
+    "custom website developer Saharanpur",
+    "SEO expert in Saharanpur",
   ],
+
   authors: [{ name: "Shivansh Singh" }],
   openGraph: {
     title: "Shivansh Singh | Saharanpur Web Developer",
@@ -101,7 +112,9 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen pt-24">{children}</main>
+
           <Footer />
+          <WhatsAppButton phoneNumber="917618550475" />
         </ThemeProvider>
       </body>
     </html>
