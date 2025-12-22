@@ -5,6 +5,7 @@ import Newsletter from "./components/Newsletter";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import ImpactMetrics from "./components/ImpactMetrics";
+import VideoService from "./components/VideoService";
 
 export default function Home() {
   dbConnect();
@@ -15,6 +16,7 @@ export default function Home() {
       <Projects />
       <Testimonials />
       <Blogs />
+      <VideoService />
       <Newsletter />
     </>
   );
