@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { ThemeProvider } from "./context/ThemeContext";
 import Footer from "./components/Footer";
-import Script from "next/script"; // ✅ for Schema
+import Script from "next/script"; // ✅ Needed for Analytics & Schema
 import WhatsAppButton from "./components/common/WhatsAppButton";
 
 const geistSans = Geist({
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     siteName: "Shivansh Portfolio",
     images: [
       {
-        url: "https://shivansh-webdev.vercel.app/og-image.jpg", // Replace with your image
+        url: "https://shivansh-webdev.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Shivansh Singh - Saharanpur Web Developer",
@@ -109,10 +109,25 @@ export default function RootLayout({
       <body
         className={`bg-white transition-colors dark:bg-gray-900 dark:text-white ${geistSans.variable} ${geistMono.variable}`}
       >
+        {/* ✅ 1. Load Google Analytics Library */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-5570D915LB"
+        />
+        
+        {/* ✅ 2. Configure Google Analytics */}
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5570D915LB');
+          `}
+        </Script>
+
         <ThemeProvider>
           <Navbar />
           <main className="min-h-screen pt-24">{children}</main>
-
           <Footer />
           <WhatsAppButton phoneNumber="917618550475" />
         </ThemeProvider>
