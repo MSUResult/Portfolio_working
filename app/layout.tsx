@@ -67,6 +67,11 @@ export const metadata: Metadata = {
       "Building modern websites with React, Next.js & Tailwind — based in Saharanpur, India.",
     images: ["https://shivansh-webdev.vercel.app/og-image.jpg"],
   },
+
+  // ✅ CORRECTED VERIFICATION SECTION
+  verification: {
+    google: "Y36bdXR4XbcJThPjEki14g9oZ-eJJyK67frahLuek0c",
+  },
 };
 
 export default function RootLayout({
@@ -114,7 +119,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-5570D915LB"
         />
-        
+
         {/* ✅ 2. Configure Google Analytics */}
         <Script id="google-analytics" strategy="afterInteractive">
           {`
