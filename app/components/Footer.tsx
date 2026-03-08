@@ -44,7 +44,7 @@ export default function Footer() {
               <FaGithub className="h-6 w-6" />
             </a>
             <a
-              href="https://www.instagram.com/shivanshdevloperWWW"
+              href="https://www.instagram.com/shivanshdevloper"
               target="_blank"
               rel="noopener noreferrer"
               className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
